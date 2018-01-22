@@ -16,10 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { return false }
         
-        let weatherViewController  = UIViewController()
+        let weatherViewController  = WeatherTabBarController()
         window.rootViewController = UINavigationController(rootViewController: weatherViewController)
         window.makeKeyAndVisible()
         return true
     }
 }
-
