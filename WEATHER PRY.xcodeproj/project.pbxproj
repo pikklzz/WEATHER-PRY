@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DF0E86932015E31D0036EA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86922015E31D0036EA5F /* AppDelegate.swift */; };
 		DF0E86952015E31D0036EA5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86942015E31D0036EA5F /* ViewController.swift */; };
-		DF0E86982015E31D0036EA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0E86962015E31D0036EA5F /* Main.storyboard */; };
 		DF0E869A2015E31D0036EA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0E86992015E31D0036EA5F /* Assets.xcassets */; };
 		DF0E869D2015E31D0036EA5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0E869B2015E31D0036EA5F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		DF0E868F2015E31D0036EA5F /* WEATHER PRY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WEATHER PRY.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0E86922015E31D0036EA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF0E86942015E31D0036EA5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF0E86972015E31D0036EA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF0E86992015E31D0036EA5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF0E869C2015E31D0036EA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF0E869E2015E31D0036EA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			children = (
 				DF0E86922015E31D0036EA5F /* AppDelegate.swift */,
 				DF0E86942015E31D0036EA5F /* ViewController.swift */,
-				DF0E86962015E31D0036EA5F /* Main.storyboard */,
 				DF0E86992015E31D0036EA5F /* Assets.xcassets */,
 				DF0E869B2015E31D0036EA5F /* LaunchScreen.storyboard */,
 				DF0E869E2015E31D0036EA5F /* Info.plist */,
@@ -125,7 +122,6 @@
 			files = (
 				DF0E869D2015E31D0036EA5F /* LaunchScreen.storyboard in Resources */,
 				DF0E869A2015E31D0036EA5F /* Assets.xcassets in Resources */,
-				DF0E86982015E31D0036EA5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,14 +140,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DF0E86962015E31D0036EA5F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF0E86972015E31D0036EA5F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF0E869B2015E31D0036EA5F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,6 +264,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "WEATHER PRY/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pikklzz.WEATHER-PRY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,6 +279,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "WEATHER PRY/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pikklzz.WEATHER-PRY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
