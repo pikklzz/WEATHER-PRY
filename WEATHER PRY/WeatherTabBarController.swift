@@ -10,6 +10,12 @@ import UIKit
 
 class WeatherTabBarController: UITabBarController {
     
+    private(set) var currentCity: String = "" {
+        didSet{
+            title = currentCity
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,5 +33,7 @@ class WeatherTabBarController: UITabBarController {
         viewControllers = tabBarList
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
+        
+        currentCity = "Uryupinsk"
     }
 }
