@@ -9,21 +9,23 @@
 import UIKit
 
 class WeatherTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    let tableViewViewController = TableViewViewController()
-    tableViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
-    let collectionViewViewController = CollectionViewViewController()
-    collectionViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        let tableViewViewController = TableViewViewController()
+        tableViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
-    let stackViewViewController = StackViewViewController()
-    stackViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 2)
+        let collectionViewViewController = CollectionViewViewController()
+        collectionViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         
-    let tabBarList = [tableViewViewController, collectionViewViewController, stackViewViewController]
+        let stackViewViewController = StackViewViewController()
+        stackViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 2)
         
-    viewControllers = tabBarList
+        let tabBarList = [tableViewViewController, collectionViewViewController, stackViewViewController]
+        
+        viewControllers = tabBarList
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
     }
 }

@@ -13,5 +13,4 @@ class CollectionViewViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .green
     }
-
 }

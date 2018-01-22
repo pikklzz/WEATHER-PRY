@@ -13,6 +13,5 @@ class TableViewViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
     }
-
 }
 
