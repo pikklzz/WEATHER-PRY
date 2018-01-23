@@ -16,6 +16,8 @@
 		DF0E86A72015E8AA0036EA5F /* CollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86A62015E8AA0036EA5F /* CollectionViewViewController.swift */; };
 		DF0E86A92015E9200036EA5F /* StackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86A82015E9200036EA5F /* StackViewViewController.swift */; };
 		DF0E86AB2015F5E90036EA5F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86AA2015F5E90036EA5F /* Forecast.swift */; };
+		DF401F7220171EC600E75188 /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF401F7120171EC600E75188 /* WeatherDataSource.swift */; };
+		DF5E2C222016018E00AEA252 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E2C212016018E00AEA252 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DF0E86A62015E8AA0036EA5F /* CollectionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewViewController.swift; sourceTree = "<group>"; };
 		DF0E86A82015E9200036EA5F /* StackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewViewController.swift; sourceTree = "<group>"; };
 		DF0E86AA2015F5E90036EA5F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		DF401F7120171EC600E75188 /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
+		DF5E2C212016018E00AEA252 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				DF0E86A42015E63B0036EA5F /* WeatherTabBarController.swift */,
+				DF401F7120171EC600E75188 /* WeatherDataSource.swift */,
 				DF0E86942015E31D0036EA5F /* TableViewViewController.swift */,
 				DF0E86A62015E8AA0036EA5F /* CollectionViewViewController.swift */,
 				DF0E86A82015E9200036EA5F /* StackViewViewController.swift */,
 				DF0E86AA2015F5E90036EA5F /* Forecast.swift */,
+				DF5E2C212016018E00AEA252 /* NetworkManager.swift */,
 				DF0E86AC2015FA680036EA5F /* Supporting Files */,
 				DF0E869B2015E31D0036EA5F /* LaunchScreen.storyboard */,
 			);
@@ -242,7 +248,9 @@
 				DF0E86952015E31D0036EA5F /* TableViewViewController.swift in Sources */,
 				DF0E86932015E31D0036EA5F /* AppDelegate.swift in Sources */,
 				DF0E86A92015E9200036EA5F /* StackViewViewController.swift in Sources */,
+				DF5E2C222016018E00AEA252 /* NetworkManager.swift in Sources */,
 				DF0E86A52015E63B0036EA5F /* WeatherTabBarController.swift in Sources */,
+				DF401F7220171EC600E75188 /* WeatherDataSource.swift in Sources */,
 				DF0E86AB2015F5E90036EA5F /* Forecast.swift in Sources */,
 				DF0E86A72015E8AA0036EA5F /* CollectionViewViewController.swift in Sources */,
 			);

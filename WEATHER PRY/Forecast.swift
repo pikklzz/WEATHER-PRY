@@ -7,14 +7,24 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct Forecast {
-    let cityName: String
-    let date: Date
+    let date: String
     let currentTemperature: Double
     let maxTemperature: Double
     let minTemperature: Double
     let pressure: Double
     let windSpeed: Double
-    let weatherIconURL: String
+    let weatherIconID: String
+    
+    init(json: JSON) {
+        date = json["dt_txt"].stringValue
+        currentTemperature = json["main"]["temp"].doubleValue
+        maxTemperature = json["main"]["temp_max"].doubleValue
+        minTemperature = json["main"]["temp_min"].doubleValue
+        pressure = json["main"]["pressure"].doubleValue
+        windSpeed = json["wind"]["speed"].doubleValue
+        weatherIconID = json["weather"][0]["icon"].stringValue
+    }
 }

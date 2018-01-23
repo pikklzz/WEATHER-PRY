@@ -10,15 +10,16 @@ import UIKit
 
 class WeatherTabBarController: UITabBarController {
     
-    private(set) var currentCity: String = "" {
+    private(set) var currentCity: String = "WEATHER PRY" {
         didSet{
             title = currentCity
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    private var weatherDataSource = WeatherDataSource()
+    private var forecasts: [Forecast] = []
+    
+    func setupTabs() {
         let tableViewViewController = TableViewViewController()
         tableViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
@@ -29,11 +30,25 @@ class WeatherTabBarController: UITabBarController {
         stackViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 2)
         
         let tabBarList = [tableViewViewController, collectionViewViewController, stackViewViewController]
-        
         viewControllers = tabBarList
+    }
+    
+    override func viewDidLoad() {
+        
+        setupTabs()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
         
-        currentCity = "Uryupinsk"
+        weatherDataSource.weather() { currentCity, forecasts, error in
+            if let currentCity = currentCity {
+                self.currentCity = currentCity
+            }
+            if let forecasts = forecasts {
+                self.forecasts = forecasts
+            }
+        }
+        
+        super.viewDidLoad()
+        
     }
 }
