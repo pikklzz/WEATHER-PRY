@@ -17,7 +17,7 @@ class WeatherTabBarController: UITabBarController {
     }
     
     private var weatherDataSource = WeatherDataSource()
-    private var forecasts: [Forecast] = []
+    private(set) var forecasts: [Forecast] = []
     
     func setupTabs() {
         let tableViewViewController = TableViewViewController()
@@ -46,6 +46,7 @@ class WeatherTabBarController: UITabBarController {
             if let forecasts = forecasts {
                 self.forecasts = forecasts
             }
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
         }
         
         super.viewDidLoad()
