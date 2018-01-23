@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class WeatherTabBarController: UITabBarController {
     
@@ -33,12 +34,8 @@ class WeatherTabBarController: UITabBarController {
         viewControllers = tabBarList
     }
     
-    override func viewDidLoad() {
-        
-        setupTabs()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
-        
+    @objc func renewWeather() {
+        MBProgressHUD.showAdded(to: view, animated: true)
         weatherDataSource.weather() { currentCity, forecasts, error in
             if let currentCity = currentCity {
                 self.currentCity = currentCity
@@ -47,7 +44,18 @@ class WeatherTabBarController: UITabBarController {
                 self.forecasts = forecasts
             }
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
+        
+    }
+    
+    override func viewDidLoad() {
+        
+        setupTabs()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(renewWeather))
+        
+        renewWeather()
         
         super.viewDidLoad()
         
