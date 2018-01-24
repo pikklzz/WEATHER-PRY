@@ -24,4 +24,9 @@ struct NetworkManager {
             }
         }
     }
+    
+    func iconURL(byID ID: String) -> String {
+        let apiCall = "https://openweathermap.org/img/w/\(ID).png"
+        return apiCall
+    }
 }

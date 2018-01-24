@@ -72,7 +72,27 @@ extension TableViewViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.cellID, for: indexPath) as! WeatherTableViewCell
         if let tabBar = tabBar {
             let forecast = tabBar.forecasts[indexPath.row]
-            cell.date.text = forecast.date
+            
+            func formatDate() -> String {
+                let date = Date(timeIntervalSince1970: forecast.date)
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .full
+                dateFormatter.timeStyle = .short
+                
+                return dateFormatter.string(from: date)
+            }
+            
+            let date = formatDate()
+            
+            cell.date.text = date
+            cell.minMaxTemperature.text = "\(forecast.minTemperature)℃ / \(forecast.maxTemperature)℃"
+            cell.pressure.text = "Pressure: \(forecast.pressure) hPa"
+            cell.windSpeed.text = "Wind Speed: \(forecast.windSpeed) m/s"
+            
+            cell.currentWeatherIcon.sd_setShowActivityIndicatorView(true)
+            cell.currentWeatherIcon.sd_setImage(with: URL(string: tabBar.weatherDataSource.icon(byID: forecast.weatherIconID)))
+            
+            cell.currentTemperature.text = "\(forecast.currentTemperature)℃"
         }
         return cell
     }

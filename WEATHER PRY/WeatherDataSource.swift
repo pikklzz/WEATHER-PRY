@@ -12,7 +12,7 @@ import SwiftyJSON
 struct WeatherDataSource {
     private let networkManager = NetworkManager()
     
-    mutating func weather(completionHandler: @escaping (String?, [Forecast]?, Error?) -> ()) {
+    func weather(completionHandler: @escaping (String?, [Forecast]?, Error?) -> ()) {
         
         var forecasts: [Forecast] = []
         var currentCity: String = ""
@@ -28,5 +28,9 @@ struct WeatherDataSource {
             
             completionHandler(currentCity, forecasts, nil)
         }
+    }
+    
+    func icon(byID ID: String) -> String {
+        return networkManager.iconURL(byID: ID)
     }
 }

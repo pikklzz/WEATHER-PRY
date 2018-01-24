@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let weatherViewController  = WeatherTabBarController()
         window.rootViewController = UINavigationController(rootViewController: weatherViewController)
         window.makeKeyAndVisible()
+        
         return true
     }
 }

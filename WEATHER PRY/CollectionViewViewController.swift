@@ -10,7 +10,7 @@ import UIKit
 
 class CollectionViewViewController: UIViewController {
     override func viewDidLoad() {
-        super.viewDidLoad()
         view.backgroundColor = .green
+        super.viewDidLoad()
     }
 }

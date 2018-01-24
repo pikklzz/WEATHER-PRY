@@ -17,10 +17,10 @@ class WeatherTabBarController: UITabBarController {
         }
     }
     
-    private var weatherDataSource = WeatherDataSource()
+    private(set) var weatherDataSource = WeatherDataSource()
     private(set) var forecasts: [Forecast] = []
     
-    func setupTabs() {
+    private func setupTabs() {
         let tableViewViewController = TableViewViewController()
         tableViewViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
@@ -34,7 +34,7 @@ class WeatherTabBarController: UITabBarController {
         viewControllers = tabBarList
     }
     
-    @objc func renewWeather() {
+    @objc private func renewWeather() {
         MBProgressHUD.showAdded(to: view, animated: true)
         weatherDataSource.weather() { currentCity, forecasts, error in
             if let currentCity = currentCity {
@@ -50,11 +50,9 @@ class WeatherTabBarController: UITabBarController {
     }
     
     override func viewDidLoad() {
-        
-        setupTabs()
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(renewWeather))
         
+        setupTabs()
         renewWeather()
         
         super.viewDidLoad()
