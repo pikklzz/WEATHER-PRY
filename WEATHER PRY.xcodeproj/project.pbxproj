@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		78BD43E21ACE351A606890E6 /* Pods_WEATHER_PRY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF89D8DE56CB56102BFC1B /* Pods_WEATHER_PRY.framework */; };
+		DF07E7352019B8BB00D7AA9D /* Forecastable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF07E7342019B8BB00D7AA9D /* Forecastable.swift */; };
+		DF07E7372019B8FA00D7AA9D /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF07E7362019B8FA00D7AA9D /* ForecastTableViewCell.swift */; };
+		DF07E7392019B92300D7AA9D /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF07E7382019B92300D7AA9D /* ForecastCollectionViewCell.swift */; };
 		DF0E86932015E31D0036EA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86922015E31D0036EA5F /* AppDelegate.swift */; };
 		DF0E86952015E31D0036EA5F /* TableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86942015E31D0036EA5F /* TableViewViewController.swift */; };
 		DF0E869A2015E31D0036EA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0E86992015E31D0036EA5F /* Assets.xcassets */; };
@@ -17,7 +20,6 @@
 		DF0E86A92015E9200036EA5F /* StackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86A82015E9200036EA5F /* StackViewViewController.swift */; };
 		DF0E86AB2015F5E90036EA5F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E86AA2015F5E90036EA5F /* Forecast.swift */; };
 		DF401F7220171EC600E75188 /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF401F7120171EC600E75188 /* WeatherDataSource.swift */; };
-		DF401F742017370000E75188 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF401F732017370000E75188 /* WeatherTableViewCell.swift */; };
 		DF5E2C222016018E00AEA252 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E2C212016018E00AEA252 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,9 @@
 		09FF89D8DE56CB56102BFC1B /* Pods_WEATHER_PRY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WEATHER_PRY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19C9E9B19FBB50BB6DC1774 /* Pods-WEATHER PRY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WEATHER PRY.release.xcconfig"; path = "Pods/Target Support Files/Pods-WEATHER PRY/Pods-WEATHER PRY.release.xcconfig"; sourceTree = "<group>"; };
 		D21E6A8B25879D35A38DF84D /* Pods-WEATHER PRY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WEATHER PRY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WEATHER PRY/Pods-WEATHER PRY.debug.xcconfig"; sourceTree = "<group>"; };
+		DF07E7342019B8BB00D7AA9D /* Forecastable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecastable.swift; sourceTree = "<group>"; };
+		DF07E7362019B8FA00D7AA9D /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		DF07E7382019B92300D7AA9D /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF0E868F2015E31D0036EA5F /* WEATHER PRY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WEATHER PRY.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0E86922015E31D0036EA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF0E86942015E31D0036EA5F /* TableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +41,6 @@
 		DF0E86A82015E9200036EA5F /* StackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewViewController.swift; sourceTree = "<group>"; };
 		DF0E86AA2015F5E90036EA5F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		DF401F7120171EC600E75188 /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
-		DF401F732017370000E75188 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		DF5E2C212016018E00AEA252 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,9 +97,11 @@
 				DF0E86A42015E63B0036EA5F /* WeatherTabBarController.swift */,
 				DF401F7120171EC600E75188 /* WeatherDataSource.swift */,
 				DF0E86942015E31D0036EA5F /* TableViewViewController.swift */,
-				DF401F732017370000E75188 /* WeatherTableViewCell.swift */,
+				DF07E7362019B8FA00D7AA9D /* ForecastTableViewCell.swift */,
 				DF0E86A62015E8AA0036EA5F /* CollectionViewViewController.swift */,
+				DF07E7382019B92300D7AA9D /* ForecastCollectionViewCell.swift */,
 				DF0E86A82015E9200036EA5F /* StackViewViewController.swift */,
+				DF07E7342019B8BB00D7AA9D /* Forecastable.swift */,
 				DF0E86AA2015F5E90036EA5F /* Forecast.swift */,
 				DF5E2C212016018E00AEA252 /* NetworkManager.swift */,
 				DF0E86AC2015FA680036EA5F /* Supporting Files */,
@@ -248,13 +254,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF07E7352019B8BB00D7AA9D /* Forecastable.swift in Sources */,
 				DF0E86952015E31D0036EA5F /* TableViewViewController.swift in Sources */,
+				DF07E7392019B92300D7AA9D /* ForecastCollectionViewCell.swift in Sources */,
 				DF0E86932015E31D0036EA5F /* AppDelegate.swift in Sources */,
 				DF0E86A92015E9200036EA5F /* StackViewViewController.swift in Sources */,
 				DF5E2C222016018E00AEA252 /* NetworkManager.swift in Sources */,
 				DF0E86A52015E63B0036EA5F /* WeatherTabBarController.swift in Sources */,
 				DF401F7220171EC600E75188 /* WeatherDataSource.swift in Sources */,
-				DF401F742017370000E75188 /* WeatherTableViewCell.swift in Sources */,
+				DF07E7372019B8FA00D7AA9D /* ForecastTableViewCell.swift in Sources */,
 				DF0E86AB2015F5E90036EA5F /* Forecast.swift in Sources */,
 				DF0E86A72015E8AA0036EA5F /* CollectionViewViewController.swift in Sources */,
 			);

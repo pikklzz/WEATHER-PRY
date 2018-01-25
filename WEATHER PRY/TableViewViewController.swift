@@ -12,7 +12,7 @@ class TableViewViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(WeatherTableViewCell.self, forCellReuseIdentifier: WeatherTableViewCell.cellID)
+        tableView.register(ForecastTableViewCell.self, forCellReuseIdentifier: ForecastTableViewCell.cellID)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -20,7 +20,6 @@ class TableViewViewController: UIViewController {
     private var tabBar: WeatherTabBarController? = nil
     
     private func configureTableView() {
-        tableView.backgroundView = UIView()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelection = false
@@ -69,7 +68,7 @@ extension TableViewViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.cellID, for: indexPath) as! WeatherTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.cellID, for: indexPath) as! ForecastTableViewCell
         if let tabBar = tabBar {
             let forecast = tabBar.forecasts[indexPath.row]
             

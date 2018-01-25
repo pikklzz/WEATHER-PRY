@@ -44,6 +44,7 @@ class WeatherTabBarController: UITabBarController {
                 self.forecasts = forecasts
             }
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadCollection"), object: nil)
             MBProgressHUD.hide(for: self.view, animated: true)
         }
         
