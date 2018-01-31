@@ -18,8 +18,8 @@ class ForecastCollectionViewCell: UICollectionViewCell, Forecastable {
     let pressure = UILabel()
     let windSpeed = UILabel()
     
-    internal let currentWeatherView = UIView()
-    internal let weatherData = UIView()
+    let currentWeatherView = UIView()
+    let weatherData = UIView()
     let currentTemperature = UILabel()
     let currentWeatherIcon = UIImageView()
     
@@ -27,6 +27,7 @@ class ForecastCollectionViewCell: UICollectionViewCell, Forecastable {
         super.init(frame: frame)
         
         configureCellContent()
+        backgroundColor = .white
         contentView.addSubview(weatherData)
         contentView.addSubview(currentWeatherView)
         
@@ -37,17 +38,18 @@ class ForecastCollectionViewCell: UICollectionViewCell, Forecastable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes
-    {
-        let attributes: UICollectionViewLayoutAttributes = layoutAttributes.copy() as! UICollectionViewLayoutAttributes
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        guard let attributes = layoutAttributes.copy() as? UICollectionViewLayoutAttributes else {
+            fatalError()
+        }
         
         var newFrame = attributes.frame
-        self.frame = newFrame
+        frame = newFrame
         
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
+        setNeedsLayout()
+        layoutIfNeeded()
         
-        let desiredHeight: CGFloat = self.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        let desiredHeight: CGFloat = contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
         newFrame.size.height = desiredHeight
         attributes.frame = newFrame
         return attributes

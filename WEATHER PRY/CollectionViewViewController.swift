@@ -59,7 +59,11 @@ extension CollectionViewViewController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ForecastCollectionViewCell.cellID, for: indexPath) as! ForecastCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ForecastCollectionViewCell.cellID, for: indexPath)
+            as? ForecastCollectionViewCell else {
+                fatalError()
+        }
+        
         if let tabBar = tabBar {
             let forecast = tabBar.forecasts[indexPath.row]
             

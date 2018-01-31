@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  WEATHER PRY
@@ -68,7 +69,11 @@ extension TableViewViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.cellID, for: indexPath) as! ForecastTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.cellID, for: indexPath)
+            as? ForecastTableViewCell else {
+                fatalError()
+        }
+        
         if let tabBar = tabBar {
             let forecast = tabBar.forecasts[indexPath.row]
             
